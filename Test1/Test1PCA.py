@@ -46,4 +46,5 @@ print(X_pca_manual[:5])
 # 计算每个主成分的解释方差比
 # 特征值除以所有特征值之和，得到每个主成分占的总信息比例
 print("各主成分解释方差比：")
-print(eig_vals / np.sum(eig_vals))
+r=eig_vals / np.sum(eig_vals)
+print(r[:2])
