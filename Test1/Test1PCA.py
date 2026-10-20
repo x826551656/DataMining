@@ -13,7 +13,7 @@ print("去均值前五行：\n",X_centered[:5])
 cov_matrix=np.cov(X_centered,rowvar=False)
 print("协方差矩阵：\n",cov_matrix)
 eig_vals, eig_vecs = np.linalg.eigh(cov_matrix)
-# [::-1]表示把索引反转，变成从大到小
+# [::-1]表示把索引反转，变成从大到小                                   
 idx = np.argsort(eig_vals)[::-1]
 # 按照从大到小的索引重新排列特征值
 eig_vals = eig_vals[idx]
@@ -42,9 +42,3 @@ X_pca_manual = X_centered.dot(W)
 
 print("手动PCA降维后前五行数据：")
 print(X_pca_manual[:5])
-
-# 计算每个主成分的解释方差比
-# 特征值除以所有特征值之和，得到每个主成分占的总信息比例
-print("各主成分解释方差比：")
-r=eig_vals / np.sum(eig_vals)
-print(r[:2])

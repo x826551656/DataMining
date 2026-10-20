@@ -21,7 +21,3 @@ X_pca = pca.fit_transform(X)
 # 打印降维后的前五行数据
 print("sklearn PCA降维后前五行数据：")
 print(X_pca[:5])
-
-# 打印每个主成分的解释方差比
-print("解释方差比：")
-print(pca.explained_variance_ratio_)
